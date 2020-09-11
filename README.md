@@ -12,8 +12,8 @@ Run `paint.py`, pygame window will open upon running
 *Center-Wheel* - reset screen (white background, cleared canvas)
 
 ## Contents
-`paint.py:` Main loop and functions for drawing/updating window. 
-`consts.py:` Contains constant definitions (colors, screensize, pensize).
+`paint.py:` Main loop and functions for drawing/updating window.   
+`consts.py:` Contains constant definitions (colors, screensize, pensize).  
 `button.py:` Contains Button class (for color selection). Handles color changes and drawing buttons on main window.  
 
 ## Video Demonstration
