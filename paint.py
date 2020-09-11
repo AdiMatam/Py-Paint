@@ -27,7 +27,7 @@ def setup_cells(window, fill=WHITE):
 
     middle = WIDTH // 2
     offset = 30 + CB.BUT_RADIUS
-    xLocs = [middle + (offset * n) for n in range(-4, 5)]
+    xLocs = [middle + (offset * n) for n in range(-5, 6)]
 
     for i in range(len(xLocs)):
         CB(COLORS[i], xLocs[i], 10 + CB.BUT_RADIUS).draw(window)

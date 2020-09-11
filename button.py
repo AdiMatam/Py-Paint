@@ -1,4 +1,5 @@
 import pygame
+from consts import *
 
 
 class ColorButton:
@@ -12,6 +13,12 @@ class ColorButton:
         ColorButton.buttons.append(self)
 
     def draw(self, window):
+        if self.color == BLACK:
+            outline = WHITE
+        else:
+            outline = BLACK
+
+        pygame.draw.circle(window, outline, (self.x, self.y), self.BUT_RADIUS + 2)
         pygame.draw.circle(window, self.color, (self.x, self.y), self.BUT_RADIUS)
 
     @classmethod
