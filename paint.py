@@ -22,10 +22,8 @@ def display(rect=None):
     pygame.display.update()
 
 
-def setup_cells(window):
-    for i in range(0, WIDTH, CELLSIZE):
-        for j in range(0, HEIGHT, CELLSIZE):
-            pygame.draw.rect(window, WHITE, (i, j, CELLSIZE, CELLSIZE))
+def setup_cells(window, fill=WHITE):
+    window.fill(fill)
 
     middle = WIDTH // 2
     offset = 30 + CB.BUT_RADIUS
@@ -52,6 +50,7 @@ display()
 update = None
 
 current_color = BLACK
+current_fill = WHITE
 
 run = True
 while run:
@@ -72,6 +71,14 @@ while run:
             else:
                 update = True
                 rect = update_cell(win, current_color, *mouse)
+
+        elif pressed[2]:
+            mouse = pygame.mouse.get_pos()
+            if (color := CB.button_clicked(*mouse)) :
+                current_fill = color
+            else:
+                setup_cells(win, current_fill)
+                display()
 
     if update:
         display(Rect(*rect))
