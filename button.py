@@ -36,7 +36,7 @@ class ColorButton:
         for button in cls.buttons:
             if (
                 button.x - cls.BUT_RADIUS <= x <= button.x + cls.BUT_RADIUS
-                and button.y - cls.BUT_RADIUS <= y <= button.y + cls.BUT_RADIUS
+                and y <= (5 + cls.BUT_RADIUS) * 2
             ):
                 return button.color
 

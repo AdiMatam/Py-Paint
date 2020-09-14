@@ -33,8 +33,10 @@ def setup_cells(window, fill=WHITE):
     window.fill(fill)
 
     middle = WIDTH // 2
-    offset = 30 + CB.BUT_RADIUS
+    offset = CB.BUT_RADIUS * 2 + 10
     xLocs = [middle + (offset * n) for n in range(-5, 6)]
+
+    rad = CB.BUT_RADIUS + 10
 
     for i in range(len(xLocs)):
         CB(COLORS[i], xLocs[i], 10 + CB.BUT_RADIUS).draw(window, font, fill)
@@ -66,6 +68,8 @@ eraser = None
 
 current_color = BLACK
 current_fill = WHITE
+
+rad = CB.BUT_RADIUS + 10
 
 run = True
 while run:
@@ -107,3 +111,4 @@ while run:
         update = False
 
 pygame.quit()
+
