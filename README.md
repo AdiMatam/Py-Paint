@@ -10,6 +10,7 @@ Run `paint.py`, pygame window will open upon running
 *Left-Click* - select pen-color and drawing  
 *Right-Click* - select fill-color and filling screen  
 *Center-Wheel* - reset screen (white background, cleared canvas)
+*Eraser* - select pen color that is the same as the fill color to activate eraser. Eg. if current fill is blue, select blue with left-click to use eraser.
 
 ## Contents
 `paint.py:` Main loop and functions for drawing/updating window.   
