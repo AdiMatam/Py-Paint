@@ -1,12 +1,6 @@
 import pygame
 from pygame.locals import (
     QUIT,
-    MOUSEBUTTONDOWN,
-    KEYDOWN,
-    K_LEFT,
-    K_RIGHT,
-    K_DOWN,
-    K_UP,
     Rect,
 )
 
